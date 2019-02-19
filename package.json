@@ -30,5 +30,7 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
   },
-  "dependencies": {}
+  "dependencies": {
+    "element-ui": "^2.5.4"
+  }
 }
