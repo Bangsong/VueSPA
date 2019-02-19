@@ -44,7 +44,7 @@
         },
         devServer: {
             open: true,//自动在浏览器打开
-            port: 9099,//端口
+            port: 8080,//端口
             contentBase: 'dist',//指定托管的根目录
             hot: true,//启动热更新
         },
