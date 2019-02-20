@@ -4,9 +4,7 @@
       <el-main>
         <el-row type="flex" justify="center" style="margin-top:10%;">
           <el-col :span="6"></el-col>
-          <el-col :span="6">
-            <h1>登录</h1>
-          </el-col>
+          <el-col :span="6"><h1>登录</h1></el-col>
         </el-row>
         <el-row type="flex" justify="center">
           <el-col :span="6">
@@ -18,20 +16,8 @@
                 <el-input type="password" v-model="form.password" clearable></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button
-                  type="primary"
-                  @click="onSubmit('form')"
-                  style="width:100%"
-                  :loading="loading"
-                  v-if="!loading"
-                >登录</el-button>
-                <el-button
-                  type="primary"
-                  @click="onSubmit"
-                  style="width:100%"
-                  :loading="loading"
-                  v-else
-                >登录中</el-button>
+                <el-button type="primary" @click="onSubmit('form')" style="width:100%" :loading="loading" v-if="!loading" >登录</el-button>
+                <el-button type="primary" @click="onSubmit" style="width:100%" :loading="loading" v-else >登录中</el-button>
               </el-form-item>
             </el-form>
           </el-col>
@@ -85,7 +71,7 @@ export default {
 
 <style scoped>
 .el-footer {
-  color: rgb(214, 214, 214);
+  color: rgb(184, 184, 184);
   text-align: center;
 }
 </style>

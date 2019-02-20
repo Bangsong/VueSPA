@@ -10,9 +10,6 @@ const routes = [
 ];
 const router = new VueRouter({routes});
 router.beforeEach((to, from, next) => {
-    console.log(to);
-    console.log(from);
-    console.log(next);
     if (to.path == "/login" || to.path == '/logout') {
         localStorage.removeItem('token');
         to.path == '/logout' && next({ path: '/login' });
