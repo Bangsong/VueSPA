@@ -4,6 +4,7 @@ import Login from '../components/login.vue';
 import Index from '../components/index.vue';
 
 const routes = [
+    {path:'/',redirect:"/index"},
     {path:'/login',component:Login},
     {path:'/index',component:Index}
 ];
@@ -14,6 +15,7 @@ router.beforeEach((to, from, next) => {
     console.log(next);
     if (to.path == "/login" || to.path == '/logout') {
         localStorage.removeItem('token');
+        to.path == '/logout' && next({ path: '/login' });
     }
     else {
         localStorage.getItem('token') == null && next({ path: '/login' });
