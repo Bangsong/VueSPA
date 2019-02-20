@@ -25,6 +25,7 @@
 - 安装`url-loader`(用于css中使用url引用图片)：`cnpm i -D url-loader`
 - 安装`html-webpack-plugin`(自动生成html)：`cnpm i -D html-webpack-plugin`
 - 安装`clean-webpack-plugin`(自动清理文件)：`cnpm i -D clean-webpack-plugin`
+- 安装`element-ui`(第三方组件库)：`cnpm i -S element-ui`
 ## 配置环境
 - 在根目录下创建`webpakc.config.js`
 - 配置`webpack.config.js`
@@ -113,3 +114,13 @@
     +"build":"webpack"
   },
   ```
+## 问题解决
+- `npm run dev`报错
+    - 查看是否执行`cnpm i`以及执行时是否报错或中止，若是则删除`node_modeles`目录重新执行
+    - 若第一步正常执行还是报错，或者之前运行正常，再次运行时报错，应该是端口占用，目前我只有一种办法：重启电脑。
+- `引入第三方组件库element-ui`步骤
+    - 引入js：`import ElementUI from 'element-ui';`
+    - 引入css：`import 'element-ui/lib/theme-chalk/index.css';`，注意：如使用版本不同，则此路径可能不一样，注意自行调整
+    - 注册Vue组件：`Vue.use(ElementUI);`
+- `添加网站图标`
+    - 在`webpack.config.js`的`HtmlWebpackPlugin`插件处添加属性`favicon`，并指定路径即可。

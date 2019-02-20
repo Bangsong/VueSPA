@@ -27,7 +27,7 @@ module.exports = {
             },
             {
                 //配置css中使用图片
-                test: /\.(png|jpg|gif|svg|bmp|jpeg)$/,
+                test: /\.(png|jpg|gif|svg|bmp|jpeg|ico)$/,
                 use: {
                     loader: 'url-loader',
                     options: {
@@ -65,7 +65,8 @@ module.exports = {
         //自动生成html
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),//内存中的生成文件存放位置
-            filename: 'index.html'//文件名称
+            filename: 'index.html',//文件名称
+            favicon:'./src/images/faviocn.ico'//网站图标
         }),
         //自动清理文件
         new CleanWebpackPlugin(['dist']),
