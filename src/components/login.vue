@@ -4,7 +4,7 @@
       <el-main>
         <el-row type="flex" justify="center" style="margin-top:10%;">
           <el-col :span="6"></el-col>
-          <el-col :span="6"><h1>登录</h1></el-col>
+          <el-col :span="7"><h1>开发者平台</h1></el-col>
         </el-row>
         <el-row type="flex" justify="center">
           <el-col :span="6">

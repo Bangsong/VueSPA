@@ -1,6 +1,9 @@
 <template>
-  <el-container class="main">
-    <el-aside width="200px" class="leftMenu" v-show="showMenu">
+    <transition-group
+    enter-active-class="animated bounceInDown"
+    leave-active-class="animated bounceOutUp" 
+    tag="el-container" class="main" >
+    <el-aside width="200px" class="leftMenu" v-show="showMenu" key="leftMenu">
       <el-menu :default-openeds="['1', '3']">
       <el-submenu index="1">
         <template slot="title"><i class="el-icon-message"></i>导航一</template>
@@ -49,7 +52,7 @@
       </el-submenu>
     </el-menu>
     </el-aside>
-    <el-container class="rightMain">
+    <el-container class="rightMain" key="rightMain">
       <el-header>
         <label class="logo" @click="showMenu = !showMenu;">开发者平台</label>
         <a href="#/logout" class="exit">退出</a>
@@ -57,7 +60,8 @@
       <el-main>Main</el-main>
       <el-footer>@版权所有：万能的小明</el-footer>
     </el-container>
-  </el-container>
+</transition-group>
+
 </template>
 
 <script>
