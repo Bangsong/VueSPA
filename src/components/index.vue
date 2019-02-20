@@ -52,6 +52,7 @@
     <el-container class="rightMain">
       <el-header>
         <label class="logo" @click="showMenu = !showMenu;">开发者平台</label>
+        <a href="#/logout" class="exit">退出</a>
       </el-header>
       <el-main>Main</el-main>
       <el-footer>@版权所有：万能的小明</el-footer>
@@ -94,11 +95,20 @@ export default {
   color: rgb(145, 145, 145);
   text-align: center;
 }
-.logo{
+.logo,
+.exit
+{
   position: absolute;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+.logo{
   left: 10px;
   font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
+}
+.exit{
+  right: 40px;
+  text-decoration:none;
 }
 </style>
