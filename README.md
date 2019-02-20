@@ -26,6 +26,7 @@
 - 安装`html-webpack-plugin`(自动生成html)：`cnpm i -D html-webpack-plugin`
 - 安装`clean-webpack-plugin`(自动清理文件)：`cnpm i -D clean-webpack-plugin`
 - 安装`element-ui`(第三方组件库)：`cnpm i -S element-ui`
+- 安装`animate.css`(动画库)：`cnpm i -S animate.css`
 ## 配置环境
 - 在根目录下创建`webpakc.config.js`
 - 配置`webpack.config.js`
