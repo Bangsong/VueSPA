@@ -117,7 +117,7 @@
 ## 问题解决
 - `npm run dev`报错
     - 查看是否执行`cnpm i`以及执行时是否报错或中止，若是则删除`node_modeles`目录重新执行
-    - 若第一步正常执行还是报错，或者之前运行正常，再次运行时报错，应该是端口占用，目前我只有一种办法：重启电脑。
+    - 若报错信息：`Error: listen EADDRINUSE 127.0.0.1:8080`，则是端口占用，打开任务管理器关闭`Node.js: Server-side JavaScript`进程即可
 - `引入第三方组件库element-ui`步骤
     - 引入js：`import ElementUI from 'element-ui';`
     - 引入css：`import 'element-ui/lib/theme-chalk/index.css';`，注意：如使用版本不同，则此路径可能不一样，注意自行调整
